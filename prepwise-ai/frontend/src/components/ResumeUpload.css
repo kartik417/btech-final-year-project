@@ -1,0 +1,110 @@
+.resume-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.resume-card {
+  width: 500px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* FILE */
+.file-upload {
+  display: block;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.analyze-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  opacity: 0.9;
+}
+
+/* RESULT */
+.result-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+/* SCORE */
+.score-box {
+  text-align: center;
+}
+
+.score-box h2 {
+  font-size: 40px;
+  color: #2563eb;
+}
+
+/* TAGS */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.tag.missing {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* TEXT */
+.warn {
+  color: orange;
+}
+
+.ats {
+  color: green;
+  font-weight: bold;
+}
+
+.hint {
+  text-align: center;
+  color: #666;
+  margin-top: 10px;
+}

@@ -1,0 +1,101 @@
+body {
+    background: #f1f5f9;
+    /* light modern background */
+}
+
+.resume-page {
+    text-align: center;
+    /* padding: 40px; */
+    /* margin-top: 80px; */
+    /* 🔥 ADD THIS */
+}
+
+.resume-page h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.resume-page p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* CARD */
+.resume-card {
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    /* 🔥 smoother */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    /* softer shadow */
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.resume-card:hover {
+    transform: translateY(-3px);
+    /* subtle lift */
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select,
+textarea,
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.analyze-btn {
+    width: 100%;
+    padding: 10px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.analyze-btn:hover {
+    background: #1d4ed8;
+}
+
+/* RESULT */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.ats {
+    color: green;
+    font-weight: bold;
+}
+
+.missing {
+    color: red;
+}
+
+.warn {
+    color: orange;
+}
+
+.suggestions ul {
+    padding-left: 20px;
+}

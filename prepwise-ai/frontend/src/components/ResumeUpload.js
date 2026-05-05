@@ -8,7 +8,7 @@ function ResumeUpload() {
   const [jobDesc, setJobDesc] = useState("");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const baseURL = "https://btech-final-year-project-bkak.onrender.com";
   const upload = async () => {
     if (!file) {
       alert("Select resume first");
@@ -24,7 +24,7 @@ function ResumeUpload() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/resume/upload",
+        `${baseURL}/api/resume/upload`,
         formData
       );
 

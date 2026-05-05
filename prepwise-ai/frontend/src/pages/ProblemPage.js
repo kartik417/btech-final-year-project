@@ -13,15 +13,15 @@ function ProblemPage() {
     const [result, setResult] = useState(null);
     const [language, setLanguage] = useState("javascript");
     const [theme, setTheme] = useState("dark");
-
-    // 🔥 THEME APPLY
+    const baseURL = "https://btech-final-year-project-bkak.onrender.com";
+    //  THEME APPLY
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
     }, [theme]);
 
-    // 🔥 FETCH QUESTION
+    //  FETCH QUESTION
     useEffect(() => {
-        axios.get("http://localhost:5000/api/code/questions")
+        axios.get(`${baseURL}/api/code/questions`)
             .then(res => {
                 const q = res.data.find(x => x.id === Number(id));
                 setQuestion(q);
@@ -31,7 +31,7 @@ function ProblemPage() {
             });
     }, [id]);
 
-    // 🔥 DEFAULT CODE TEMPLATE
+    //  DEFAULT CODE TEMPLATE
     useEffect(() => {
         if (language === "javascript") {
             setCode(`function solve(a, b) {

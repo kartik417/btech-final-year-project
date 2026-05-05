@@ -6,9 +6,10 @@ import "./CodingPage.css"
 function CodingPage() {
   const [questions, setQuestions] = useState([]);
   const navigate = useNavigate();
-
+  const baseURL = "https://btech-final-year-project-bkak.onrender.com";
   useEffect(() => {
-    axios.get("http://localhost:5000/api/code/questions")
+    
+    axios.get(`${baseURL}/api/code/questions`)
       .then(res => setQuestions(res.data));
   }, []);
 

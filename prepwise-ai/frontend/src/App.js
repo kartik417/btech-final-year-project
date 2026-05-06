@@ -6,6 +6,7 @@ import HRPage from "./pages/HRPage";
 import ResumePage from "./pages/ResumePage";
 import ResultPage from "./pages/ResultPage";
 import ProblemPage from "./pages/ProblemPage";
+import InterviewPage from "./pages/InterviewPage";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/result" element={<ResultPage />}></Route>
 
         <Route path="/coding/:id" element={<ProblemPage />} />
+        <Route path="/interview" element={<InterviewPage />} />
       </Routes>
     </BrowserRouter>
   );

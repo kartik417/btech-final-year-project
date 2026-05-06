@@ -5,12 +5,9 @@ const app = express();
 const codingRoutes = require("./routes/codingRoutes");
 const evalRoutes = require("./routes/evaluationRoutes");
 const hrRoutes = require("./routes/hrRoutes");
+const interviewRoutes = require("./routes/interviewRoutes");
 app.use(cors());
 app.use(express.json());
-
-
-
-
 
 // Test route
 app.get("/", (req, res) => {
@@ -19,7 +16,6 @@ app.get("/", (req, res) => {
 app.use("/api/resume", resumeRoutes);
 app.use("/api/code", codingRoutes);
 app.use("/api/eval", evalRoutes);
-
-
 app.use("/api/hr", hrRoutes);
+app.use("/api/interview", interviewRoutes);
 module.exports = app;

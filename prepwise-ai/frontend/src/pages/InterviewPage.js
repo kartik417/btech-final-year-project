@@ -13,9 +13,9 @@ function InterviewPage() {
     const location = useLocation();
 
     const profile = location.state?.profile;
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+    // const [currentQuestion, setCurrentQuestion] = useState(0);
 
-    const [scores, setScores] = useState([]);
+    // const [scores, setScores] = useState([]);
     const questions = [
         "Tell me about yourself",
         "Explain React lifecycle",
@@ -49,7 +49,7 @@ function InterviewPage() {
                     <p>Question 1</p>
 
                     <h3>
-                        {questions[currentQuestion]}
+                        {questions[0]}
                     </h3>
 
                 </div>

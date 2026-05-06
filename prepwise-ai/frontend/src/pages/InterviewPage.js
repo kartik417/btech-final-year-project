@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 import Timer from "../components/interview/Timer";
 import WebcamPreview from "../components/interview/WebcamPreview";

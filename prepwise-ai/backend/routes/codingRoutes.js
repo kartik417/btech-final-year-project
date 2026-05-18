@@ -1,15 +1,24 @@
 const express = require("express");
+
 const router = express.Router();
 
-const { executeCode } = require("../controllers/codingController");
-const questions = require("../utils/questions");
+const {
+    getQuestions,
+    getQuestionById,
+    executeCode
+} = require("../controllers/codingController");
 
-//  ADD THIS (IMPORTANT)
-router.get("/questions", (req, res) => {
-  res.json(questions);
-});
 
-// existing route
+//  GET ALL QUESTIONS
+router.get("/questions", getQuestions);
+
+
+//  GET SINGLE QUESTION
+router.get("/questions/:id", getQuestionById);
+
+
+//  RUN CODE
 router.post("/run", executeCode);
+
 
 module.exports = router;

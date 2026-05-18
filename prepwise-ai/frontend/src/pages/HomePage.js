@@ -1,96 +1,300 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+
+import {
+    FaCode,
+    FaRobot,
+    FaFileAlt,
+    FaMicrophone,
+    FaArrowRight
+} from "react-icons/fa";
+
 import "./HomePage.css";
 
 function HomePage() {
+
     const navigate = useNavigate();
 
     return (
         <>
             <Navbar />
 
-            {/* 🔹 HERO SECTION */}
-            <section className="hero">
-                <div className="hero-content">
-                    <h1>PrepWise AI</h1>
-                    <p>
-                        AI-powered interview preparation platform with resume analysis,
-                        coding tests, and HR evaluation.
+            {/* HERO */}
+            <section className="home-hero">
+
+                <div className="home-hero-overlay"></div>
+
+                <div className="home-hero-content">
+
+                    <span className="home-hero-tag">
+                         AI Powered Interview Preparation
+                    </span>
+
+                    <h1 className="home-hero-title">
+                        Crack Your Dream Job with AI
+                    </h1>
+
+                    <p className="home-hero-description">
+
+                        Personalized Roadmaps, Coding Practice,
+                        Resume Analysis & Mock Interviews
+                        in one AI-powered platform.
+
                     </p>
 
-                    <div className="hero-buttons">
+                    <div className="home-hero-buttons">
+
                         <button
-                            className="btn-primary"
+                            className="home-primary-btn"
+                            onClick={() => navigate("/career")}
+                        >
+                            Start Your Journey
+                            <FaArrowRight />
+                        </button>
+
+                        <button
+                            className="home-secondary-btn"
                             onClick={() => navigate("/coding")}
                         >
-                            Start Coding Practice
+                            Explore Coding
                         </button>
 
-                        <button
-                            className="btn-secondary"
-                            onClick={() => navigate("/resume")}
-                        >
-                            Analyze Resume
-                        </button>
                     </div>
+
                 </div>
+
             </section>
 
-            {/* 🔥 FEATURES / SERVICES */}
-            <section className="services">
-                <h2>Our Features</h2>
+            {/* STATS */}
+            <section className="home-stats-section">
 
-                <div className="card-container">
-                    {/* Resume */}
-                    <div className="card">
+                <div className="home-stat-card">
+
+                    <h2>500+</h2>
+
+                    <p>Coding Problems</p>
+
+                </div>
+
+                <div className="home-stat-card">
+
+                    <h2>100+</h2>
+
+                    <p>Interview Questions</p>
+
+                </div>
+
+                <div className="home-stat-card">
+
+                    <h2>AI</h2>
+
+                    <p>Powered Evaluation</p>
+
+                </div>
+
+            </section>
+
+            {/* FEATURES */}
+            <section className="home-features-section">
+
+                <h2 className="section-title">
+                    Platform Features
+                </h2>
+
+                <div className="home-feature-grid">
+
+                    {/* CARD */}
+                    <div className="home-feature-card">
+
+                        <div className="home-feature-icon-wrapper">
+                            <FaFileAlt className="home-feature-icon" />
+                        </div>
+
                         <h3>Resume Analyzer</h3>
-                        <p>Analyze resume with AI and get ATS score</p>
+
+                        <p>
+                            Analyze resume with AI and improve ATS score instantly.
+                        </p>
+
                         <button onClick={() => navigate("/resume")}>
                             Try Now
                         </button>
+
                     </div>
 
-                    {/* Coding */}
-                    <div className="card coding-card">
-                        <h3>💻 Coding Practice</h3>
+                    {/* CARD */}
+                    <div className="home-feature-card">
+
+                        <div className="home-feature-icon-wrapper">
+                            <FaCode className="home-feature-icon" />
+                        </div>
+
+                        <h3>Coding Practice</h3>
 
                         <p>
-                            Solve real interview questions from Easy to Hard level with test cases.
+                            Practice coding interview questions with test cases.
                         </p>
 
-
-
                         <button onClick={() => navigate("/coding")}>
-                            Explore Problems →
+                            Solve Problems
                         </button>
+
                     </div>
 
-                    {/* HR */}
-                    <div className="card">
+                    {/* CARD */}
+                    <div className="home-feature-card">
+
+                        <div className="home-feature-icon-wrapper">
+                            <FaMicrophone className="home-feature-icon" />
+                        </div>
+
                         <h3>HR Interview</h3>
-                        <p>Improve communication and confidence</p>
+
+                        <p>
+                            Improve confidence and communication skills.
+                        </p>
+
                         <button onClick={() => navigate("/hr")}>
                             Practice HR
                         </button>
+
                     </div>
+
+                    {/* CARD */}
+                    <div className="home-feature-card">
+
+                        <div className="home-feature-icon-wrapper">
+                            <FaRobot className="home-feature-icon" />
+                        </div>
+
+                        <h3>AI Career Guidance</h3>
+
+                        <p>
+                            Get personalized learning roadmaps based on career goals.
+                        </p>
+
+                        <button onClick={() => navigate("/career")}>
+                            Get Started
+                        </button>
+
+                    </div>
+
                 </div>
-            </section>
 
-            {/* 🔹 ABOUT */}
-            <section className="about">
-                <h2>About PrepWise AI</h2>
+            </section>
+            {/* ROADMAP */}
+            <section className="home-roadmap-section">
+
+                <h2 className="section-title">
+                    Career Learning Roadmaps
+                </h2>
+
+                <div className="home-roadmap-grid">
+
+                    <div className="home-roadmap-card">
+                        <h3>Frontend Developer</h3>
+                        <p>HTML • CSS • JavaScript • React</p>
+                    </div>
+
+                    <div className="home-roadmap-card">
+                        <h3>MERN Stack</h3>
+                        <p>MongoDB • Express • React • Node</p>
+                    </div>
+
+                    <div className="home-roadmap-card">
+                        <h3>AI / ML Engineer</h3>
+                        <p>Python • ML • Deep Learning</p>
+                    </div>
+
+                </div>
+
+            </section>
+            {/* TESTIMONIALS */}
+            <section className="home-testimonial-section">
+
+                <h2 className="section-title">
+                    Student Success Stories
+                </h2>
+
+                <div className="home-testimonial-grid">
+
+                    <div className="home-testimonial-card">
+
+                        <p>
+                            “PrepWise AI helped me improve coding
+                            and crack my internship interview.”
+                        </p>
+
+                        <h4>— Rahul Sharma</h4>
+
+                    </div>
+
+                    <div className="home-testimonial-card">
+
+                        <p>
+                            “Resume Analyzer increased my ATS score
+                            and I got shortlisted.”
+                        </p>
+
+                        <h4>— Priya Verma</h4>
+
+                    </div>
+
+                    <div className="home-testimonial-card">
+
+                        <p>
+                            “The roadmap feature guided me from beginner
+                            to full stack developer.”
+                        </p>
+
+                        <h4>— Aman Gupta</h4>
+
+                    </div>
+
+                </div>
+
+            </section>
+            {/* CTA */}
+            <section className="home-cta-section">
+
+                <h2>
+                    Start Your Interview Preparation Today 
+                </h2>
+
                 <p>
-                    PrepWise AI helps students prepare for interviews using intelligent
-                    evaluation systems. It analyzes resume quality, coding skills, and
-                    communication ability to provide a complete readiness score.
+                    Join PrepWise AI and become interview ready.
                 </p>
-            </section>
 
-            {/* 🔹 CONTACT */}
-            <section className="contact">
-                <h2>Contact</h2>
-                <p>Email: your@email.com</p>
+                <button
+                    className="home-primary-btn"
+                    onClick={() => navigate("/career")}
+                >
+                    Get Started
+                </button>
+
             </section>
+            {/* FOOTER */}
+            <footer className="home-footer">
+
+                <h2>PrepWise AI</h2>
+
+                <p>
+                    AI-powered platform for interview preparation.
+                </p>
+
+                <div className="home-footer-links">
+
+                    <span>Home</span>
+                    <span>Features</span>
+                    <span>Contact</span>
+
+                </div>
+
+                <p className="footer-copy">
+                    © 2026 PrepWise AI. All rights reserved.
+                </p>
+
+            </footer>
         </>
     );
 }
